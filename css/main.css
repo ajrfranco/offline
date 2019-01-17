@@ -1,0 +1,749 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Braimix code
+   ========================================================================== */
+
+.general-wrapper{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+/* Panel Left */
+.panel-left{
+    position: fixed;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit- -webkit-align-items: center; align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; align-items: center;
+    -webkit-box-pack: center;
+    -webkit-  justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    top: 0;
+    left: 0;
+    width: 460px;
+    min-height: 500px;
+    height: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #533272;
+}
+
+#caret-down-bold{
+    position: absolute;
+    bottom: 21px;
+    overflow: visible;
+    animation: 2s upDown ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    display: none;
+    visibility: hidden;
+}
+
+.positioned-table p{
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+
+/* Panel Left */
+.panel-right{
+    height: 100%;
+    z-index: 0;
+    overflow: auto;
+    margin-left: 460px;
+    position: relative;
+     -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.panel-right > div{
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; 
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.positioned-table{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 317px;
+    width: 317px;
+    opacity: 1;
+    transition: opacity .8s ease;
+}
+
+.positioned-table h2{
+    line-height: 1.4;
+    margin-bottom: 30px;
+    font-size: 1.03em;
+    font-weight: 400;
+}
+
+.content-wrapper{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+   -ms-flex-direction: column;
+   -webkit-flex-direction: column;
+    -webkit-align-items: center; align-items: center;
+    padding: 70px;
+}
+
+.content-wrapper img{
+   width: 253px;
+   height: 255px;
+   vertical-align: unset;
+}
+
+.form-button{
+    background-color: #00d5a1;
+    box-shadow: none;
+    border: 0;
+    line-height: 48px;
+    border-radius: 25px;
+    color: white;
+    height: 48px;
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    padding: 0 50px;
+    margin-top: 12px;
+     -webkit-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+
+.btn-loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
+}
+
+.btn-loading .double-bounce-spinner {
+    left: auto;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.double-bounce-spinner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.double-bounce-spinner .double-bounce1, 
+.double-bounce-spinner .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+    -o-animation: bounce 2s infinite ease-in-out;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.double-bounce-spinner .double-bounce2 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.form-button:hover{
+    background-color: #0dbd92;
+}
+
+.form-button:focus{
+    outline: none !important;
+}
+
+.form-group{
+    margin-bottom: 17px;
+    position: relative;
+    display: block;
+}
+
+h2{
+     font-weight: 700;
+     font-size: 18px;
+     font-family: "Lato", Helvetica, Arial, sans-serif;
+     text-align: left;
+     width: 100%;
+}
+
+p{
+  margin: 0;
+    font: 400 14px Lato;
+    line-height: 1.5;
+    color: #484848;
+}
+
+.form-label{
+    width: 100%;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.form-input{
+    border: 1px solid #D4D9E2;
+    border-radius: 25px;
+    padding: 0 15px 0 25px;
+    font-size: 13px;
+    color: black;
+    outline: 0;
+    line-height: 1.4;
+    box-sizing: border-box;
+    height: 47px;
+    position: relative;
+    display: block;
+    width: 100%;
+    -webkit-transition: border-color .2s ease;
+    transition: border-color .2s ease;
+}
+
+.form-input:focus{
+     border: 1px solid rgba(0, 0, 0, 0.4);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-input::-moz-placeholder {
+    font-weight: 400 !important;
+    color: #596377;
+    font-size: 13px;
+}
+
+.form-input::-ms-input-placeholder {
+     font-weight: 400 !important;
+     color: #596377;
+      font-size: 13px;
+}
+
+.form-input::-webkit-input-placeholder {
+    font-weight: 400 !important;
+    color: #596377;
+     font-size: 13px;
+}
+
+#icon-app-braimix{
+    position: absolute;
+    z-index: 99;
+    top: 33px;
+    left: 26px;
+    width: 71.57px;
+    height: 37.47px;
+    overflow: visible;
+}
+
+.content-succefull{
+   display: none;
+   visibility: hidden;
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   opacity: 0;
+   z-index: 99;
+   transition: opacity 2s ease;
+}
+
+.content-succefull h2,
+.panel-left h2{
+    color: white;
+    text-align: center;
+    margin-top: 29px;
+    font-weight: 400;
+}
+
+.content-succefull p,
+.panel-left p{
+   color: rgb(184, 155, 214);
+   text-align: center;
+}
+
+.content-succefull img{
+   width: 150px;
+   height: 150px;
+}
+
+@media (max-width: 872px) {
+  .panel-left{
+    width: 100%;
+    position: relative;
+    transition: all 200ms ease-in-out;
+  } 
+
+
+  #caret-down-bold{
+    display: block;
+    visibility: visible;
+  }
+
+  #caret-down-bold:hover{
+    cursor: pointer;
+  }
+
+  #caret-down-bold path{
+    transition: fill .2s ease;
+    -webkit-transition: fill .2s ease;
+  }
+
+  #caret-down-bold:hover path{
+    fill: white !important;
+  }
+
+  .panel-left .content-wrapper {
+    padding: 6% 30%;
+  }
+
+  .panel-right > div{
+    height: 100% !important;
+    padding: 85px 0;
+  }
+
+  .positioned-table{
+    padding: 0 !important;
+  }
+
+  .panel-right{
+    margin-left: 0 !important;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px){
+  .panel-right > div {
+      padding: 85px 0;
+  }
+  .panel-right .form-button{
+    width: 100%;
+  }
+  .positioned-table{
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100%;
+  }
+  .positioned-table h2{
+    text-align: center;
+    font-size: 15px;
+  }
+  .panel-right{
+    padding: 0 12%;
+  }
+}
+
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./font/lato/lato-bold-webfont.eot');
+  src: url('./font/lato/lato-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/lato/lato-bold-webfont.woff') format('woff'), url('../font/lato/lato-bold-webfont.ttf') format('truetype'), url('../font/lato/lato-bold-webfont.svg#latobold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  /* Better Font Rendering =========== */
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./font/lato/lato-regular-webfont.eot');
+  src: url('./font/lato/lato-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../font/lato/lato-regular-webfont.woff') format('woff'), url('../font/lato/lato-regular-webfont.ttf') format('truetype'), url('../font/lato/lato-regular-webfont.svg#latoregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  /* Better Font Rendering =========== */
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  /*-webkit-text-stroke: .025em rgba(51,51,51,0.50);*/
+   font-display: swap;
+}
+
+
+/* ==========================================================================
+   Change View
+   ========================================================================== */
+
+.succefull-view .content-wrapper,
+.succefull-view .panel-right{
+  display: none;
+  visibility: hidden;
+}
+
+.succefull-view .panel-left{
+  width: 100%;
+}
+
+.succefull-view .positioned-table{
+  opacity: 0;
+}
+
+.succefull-view .content-succefull{
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   flex-direction: column;
+   -ms-flex-direction: column;
+   -webkit-flex-direction: column;
+   justify-content: center;
+   -webkit-justify-content: center;
+   -webkit-align-items: center; align-items: center;
+   visibility: visible;
+   opacity: 1
+}
+
+.succefull-view .content-succefull h2,
+.succefull-view .content-succefull p{
+  max-width: 300px;
+}
+
+.succefull-view .content-wrapper{
+  width: 100%;
+  height: 100vh;
+}
+
+.succefull-view .form-button{
+    margin-top: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.succefull-view .form-button:hover{
+    background-color: #00d5a1;
+    border: 1px solid #00d5a1;
+    color: white;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes upDown {
+  from {
+    transform: translate3d(0, -7px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to{
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@-webkit-keyframes upDown {
+  from {
+    transform: translate3d(0, -7px, 0);
+  }
+  70% {
+    transform: translate3d(0, 0, 0);
+  }
+  to{
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  }
+  50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

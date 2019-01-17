@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="ES">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Braimix: Contrata freelancers cubanos - Trabaja desde Cuba</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="faveicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body>
+
+        <!--[if lt IE 11]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+       <svg id="icon-app-braimix" xmlns="http://www.w3.org/2000/svg" width="71.57" height="37.47" viewBox="0 0 71.57 37.47">
+          <path d="M70,13.69,52.33,15.86a18.72,18.72,0,0,0-37.22,2.87h0a18.65,18.65,0,0,0,1.19,6.51L1.24,27.1a1.41,1.41,0,0,0,.17,2.81h.17l15.95-2A18.71,18.71,0,0,0,51.89,23.7l7.17-.88a1.41,1.41,0,1,0-.34-2.8l-6.25.77a18.89,18.89,0,0,0,.12-2.05h0s0,0,0-.06l17.76-2.19a1.41,1.41,0,1,0-.34-2.8Zm-36.15,21A15.91,15.91,0,0,1,20.6,27.55l28.21-3.48A15.93,15.93,0,0,1,33.84,34.65Zm15.71-13.5L19.17,24.89a15.9,15.9,0,1,1,30.37-8.68L35.48,17.94a1.41,1.41,0,0,0,.17,2.81h.17L49.74,19A15.9,15.9,0,0,1,49.55,21.14Z" style="fill: #6e5091"/>
+        </svg>
+
+        <div class="general-wrapper">
+             <div class="content-succefull">
+                    <img  src="./img/hand-solo.gif" srcset="./img/hand-solo@2x.gif 2x, ./img/hand-solo@3x.gif 3x">
+                    <h2>¡Agradecemos tu interés!</h2>
+                    <p>Te avisamos tan pronto como estemos en línea. Aprovecha la oportunidad de llegar primero.</p>
+            </div>
+
+            <div class="panel-left">
+                <div class="content-wrapper">
+                    <img id="image-hand-up" src="./img/yoga-image.gif" srcset="./img/yoga-image@2x.gif 2x, ./img/yoga-image@3x.gif 3x">
+                    <h2>¡Ya casi estamos listos!</h2>
+                    <p>Contratar freelancers cubanos nunca fue tan fácil y seguro. Desde ahora, trabajar en línea desde Cuba es realmente posible.</p>
+                </div>
+               
+                <svg id="caret-down-bold" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <path d="M15.93,15.52a1.38,1.38,0,0,1-2,0l-4.2-4.24a1.23,1.23,0,0,0-.87-.36h0A1.23,1.23,0,0,0,8,13l5.39,5.44a2.18,2.18,0,0,0,3.08,0L22,13a1.24,1.24,0,0,0-.87-2.13h0a1.24,1.24,0,0,0-.87.36Z" style="fill: #ad8ad6"/>
+                    <rect width="30" height="30" style="fill: none"/>
+                </svg>
+            </div>
+            <div class="panel-right">
+                <div>
+                    <div class="positioned-table">
+                       <h2>Mantente en contacto con nosotros: <br> Sé de los primeros en llegar.</h2>
+                    
+                       <form class="" method="post" novalidate="">
+                             <div class="form-group">
+                                <label for="emailAddress" class="form-label">Correo electrónico</label>
+                                <input autofocus id="email-address" type="email" name="email" class="form-input" placeholder="ejemplo@mail.com">
+                             </div>
+                                        
+                             <div class="form-group">
+                                <label for="text" class="form-label">Nombre</label>
+                                <input id="name-field" type="text" class="form-input" name="my-name" placeholder="Tu nombre">
+                             </div>
+
+                             <div class="text-center">
+                                <button class="form-button">
+                                    <span>Enviar</span>
+                                    <div class="btn-loading" style="display: none">
+                                        <div class="double-bounce-spinner">
+                                           <div class="double-bounce1"></div>
+                                           <div class="double-bounce2"></div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+         <script> 
+            var $buoop = {notify:{e:-6,f:-4,o:-4,s:-2,c:17},insecure:true,api:5, jsshowurl: "js/update.show.min.js" }; 
+            function $buo_f(){ 
+             var e = document.createElement("script"); 
+             e.src = "js/update.min.js"; 
+             document.body.appendChild(e);
+            };
+            try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+            catch(e){window.attachEvent("onload", $buo_f)}
+         </script>
+
+         <script type="text/javascript">
+                $(window).scroll(function() {
+                    $('#caret-down-bold').each(function(){
+                        var imagePos = $(this).offset().top;
+
+                        var topOfWindow = $(window).scrollTop();
+                        if (imagePos < topOfWindow+400) {
+                            $(this).addClass("slideUp");
+                        }
+                    });
+                });
+
+                $(function() {
+                    $('#caret-down-bold').click(function() {
+                       $('html,body').animate({
+                            scrollTop: $(".positioned-table").offset().top
+                        }, 500);
+                    });
+                });
+         </script>
+
+
+        <script type="text/javascript">
+
+            $(".panel-left").height($(window).height());
+            $(window).resize(function(){
+                 $(".panel-left").height($(window).height());
+            });
+
+        </script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
